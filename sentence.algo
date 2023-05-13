@@ -1,0 +1,28 @@
+
+
+ALGORITHM SentenceCount
+VAR
+    vcount, wcount, chcount : INTEGER;
+    sentence : STRING;
+BEGIN
+    chcount = 0, vcount = 0, wcount = 0
+
+    Read ("Sentence")
+
+    WHILE (str[i] < str.length - 1) DO
+        chcount += 1 
+
+        IF (str[i] = " " || str[i] = ".") THEN
+            wcount += 1
+        END_IF
+
+        IF (str[i] = "a", "e", "i", "o", "u" || "A", "E" , "I", "O", "U") THEN
+            vcount += 1 
+        END_IF
+        
+    END_WHILE
+
+    Write (wcount)
+    Write (vcount)
+    Write (chcount)
+END
